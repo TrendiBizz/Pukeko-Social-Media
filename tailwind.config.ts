@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				platforms: {
+					twitter: "#1DA1F2",
+					facebook: "#4267B2",
+					instagram: "#E1306C",
+					linkedin: "#0077B5"
+				},
+				vibrant: {
+					purple: "#8B5CF6",
+					pink: "#EC4899",
+					blue: "#3B82F6",
+					orange: "#F97316",
+					yellow: "#FACC15"
 				}
 			},
 			borderRadius: {
@@ -84,11 +98,23 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+				'gradient-vibrant': 'linear-gradient(90deg, #8B5CF6, #EC4899)',
+				'gradient-cool': 'linear-gradient(90deg, #3B82F6, #8B5CF6)',
+				'gradient-warm': 'linear-gradient(90deg, #F97316, #FACC15)',
 			}
 		}
 	},
